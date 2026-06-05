@@ -1,0 +1,362 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bright Future School | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #fefefe;
+      color: #1e2a3e;
+      animation: pageFade 0.5s ease-out;
+    }
+
+    @keyframes pageFade {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* smooth navigation & transitions */
+    a, button, .clickable-card {
+      transition: all 0.25s ease-in-out;
+    }
+
+    /* header & nav */
+    .top-bar {
+      background: #0b2b40;
+      color: white;
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo h1 {
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+    }
+    .logo p {
+      font-size: 0.75rem;
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      border-bottom-color: #ffb347;
+    }
+
+    /* main container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 2rem 3rem;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(135deg, #eef2f3, #d9e2e8);
+      border-radius: 2rem;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero-text {
+      flex: 2;
+    }
+    .hero-text h2 {
+      font-size: 2.4rem;
+      color: #0b2b40;
+      margin-bottom: 1rem;
+    }
+    .hero-img {
+      flex: 1;
+      text-align: center;
+    }
+    .hero-img img {
+      max-width: 100%;
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.2);
+      background: #ccc;
+    }
+    .btn {
+      display: inline-block;
+      background: #ff8c42;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .btn:hover {
+      background: #e5722a;
+      transform: translateY(-2px);
+    }
+
+    /* card grids */
+    .section-title {
+      font-size: 2rem;
+      margin: 2.5rem 0 1.2rem 0;
+      border-left: 6px solid #ff8c42;
+      padding-left: 1rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,0.15);
+    }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #cbd5e1;
+    }
+    .card-content {
+      padding: 1.2rem;
+    }
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      color: #0b2b40;
+    }
+    .badge {
+      background: #ffb34720;
+      color: #b45f1b;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 0.6rem;
+    }
+
+    /* credentials row */
+    .credentials-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .cred-card {
+      background: #0b2b40;
+      color: white;
+      border-radius: 2rem;
+      padding: 1.6rem;
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .cred-card:hover {
+      background: #1e4a62;
+      transform: scale(1.02);
+    }
+    .cred-card h4 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: #0b2b40;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #ffb347;
+      text-decoration: none;
+    }
+
+    @media (max-width: 780px) {
+      .top-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text h2 {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 1.5rem;
+      }
+    }
+    /* page specific transitions */
+    .page-transition {
+      animation: pageFade 0.45s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo">
+      <h1>🌟 tongani secondary  School</h1>
+      <p>Excellence in Education | tonagni</p>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="branch.html">Our Branch</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="hero">
+      <div class="hero-text">
+        <h2>Shape Your Future With   tongani secondary school </h2>
+
+        <p>Welcome to tongani secondary  School
+           –  pangni, where curiosity meets innovation. 
+          We nurture young minds with modern academics, 
+          holistic values, and global perspectives.
+        </p>
+
+        <a href="admissions.html" class="btn">Enroll Today →</a>
+      </div>
+      <div class="hero-img">
+        <!-- replace 'src' with your own picture link -->
+        <img src="https://picsum.photos/id/20/400/260" alt="School campus" style="width:100%; max-width:360px;">
+        <p style="font-size:0.7rem; margin-top:6px;">📷 (Replace this image link)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">📌 School Credentials & Highlights</h2>
+    <div class="credentials-row">
+      <div class="cred-card" onclick="location.href='credentials.html'">
+        <h4>🏅 15+ Years</h4>
+        <p>Educational Excellence</p>
+      </div>
+      <div class="cred-card" onclick="location.href='credentials.html'">
+        <h4>✅ IB & CBSE Affil.</h4>
+        <p>Global Recognition</p>
+      </div>
+      <div class="cred-card" onclick="location.href='credentials.html'">
+        <h4>🏆 98% Results</h4>
+        <p>Board Exam Success</p>
+      </div>
+      <div class="cred-card" onclick="location.href='credentials.html'">
+        <h4>🌍 30+ Awards</h4>
+        <p>Innovation in Pedagogy</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">📚 Explore Our Academic World</h2>
+    <div class="card-grid">
+      <a href="academics.html" class="card">
+        <img class="card-img" src="https://picsum.photos/id/1/400/220" alt="Academics">
+        <div class="card-content">
+          <h3>📖 Academic Programs</h3>
+          <p>STEM, Humanities, Arts & Advanced Curricula. Modern labs & digital classrooms.</p>
+          <span class="badge">Click to explore →</span>
+        </div>
+      </a>
+      <a href="branch.html" class="card">
+        <img class="card-img" src="https://picsum.photos/id/177/400/220" alt="Branch facilities">
+        <div class="card-content">
+          <h3>🏫 Greenfield Branch</h3>
+          <p>State-of-the-art campus, smart libraries, sports complex & eco-friendly zone.</p>
+          <span class="badge">Branch details →</span>
+        </div>
+      </a>
+      <a href="admissions.html" class="card">
+        <img class="card-img" src="https://picsum.photos/id/159/400/220" alt="Admissions">
+        <div class="card-content">
+          <h3>📝 Admissions Open</h3>
+          <p>Apply for 2025-26. Scholarships & merit-based seats. Limited seats.</p>
+          <span class="badge">Enroll now →</span>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">🏅 Why Choose Our Branch?</h2>
+    <div class="card-grid">
+      <div class="card" onclick="location.href='branch.html'" style="cursor:pointer">
+        <div class="card-content">
+          <h3>🌿 Smart Campus</h3>
+          <p>Interactive boards, AI labs, and modern infrastructure.</p>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='branch.html'" style="cursor:pointer">
+        <div class="card-content">
+          <h3>👩‍🏫 Expert Faculty</h3>
+          <p>Highly qualified teachers & student mentorship programs.</p>
+        </div>
+      </div>
+      <div class="card" onclick="location.href='credentials.html'" style="cursor:pointer">
+        <div class="card-content">
+          <h3>🏅 100+ Recognitions</h3>
+          <p>Accredited by international boards & winning culture.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 TONGANI SECONDARY SCHOOL  – PANGANI  | Excellence in Holistic Education</p>
+    <p>📍 Sector 12, Greenfield Avenue, Cityville | 📞 +91 98765 43210 | ✉️ info@tonganischool.edu</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="credentials.html">Credentials</a></p>
+  </footer>
+
+  <script>
+    // small helper to add page transition effect on any internal link click (optional smoothness)
+    document.querySelectorAll('.nav-links a, .btn, .card, .cred-card').forEach(link => {
+      if(link.tagName === 'A' && link.href && !link.href.startsWith('#')){
+        link.addEventListener('click', function(e) {
+          // if it's an internal page link, we let default happen, but we add fade-out effect optional
+          let targetUrl = this.href;
+          if(targetUrl.includes(window.location.origin)){
+            e.preventDefault();
+            document.body.style.animation = 'none';
+            document.body.offsetHeight;
+            document.body.style.animation = 'pageFade 0.3s ease-out';
+            setTimeout(()=>{
+              window.location.href = targetUrl;
+            }, 150);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

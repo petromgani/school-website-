@@ -1,0 +1,107 @@
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Our Branch | Greenfield</title>
+<style>
+  * { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family: system-ui; 
+  }
+
+  body { 
+    background:#fefefe; 
+    animation: fade 0.5s; 
+  }
+
+  @keyframes fade { 
+    from{opacity:0;} to{opacity:1;}
+   }
+
+  .top-bar {
+     background:#0b2b40; 
+     color:white; 
+     padding:0.8rem 2rem; 
+     display:flex;
+      justify-content:space-between; 
+      flex-wrap:wrap; 
+    }
+
+  .nav-links a { 
+    color:white; 
+    text-decoration:none; 
+    margin:0 1rem; 
+    border-bottom:2px solid transparent;
+   }
+
+  .nav-links a.active {
+     border-bottom-color:#ffb347; 
+    }
+
+  .container { 
+    max-width:1100px; 
+    margin:2rem auto;
+     padding:0 2rem; 
+    }
+
+  .branch-grid {
+     display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+       gap:2rem; 
+       margin:2rem 0;
+       }
+
+  .feature { 
+    background:white;
+     border-radius:1.5rem; 
+     padding:1.5rem;
+      box-shadow:0 8px 20px rgba(0,0,0,0.05);
+     }
+
+  footer { 
+    background:#0b2b40; 
+    color:white;
+     text-align:center; 
+     padding:1.5rem; 
+     margin-top:3rem;
+     }
+
+  img { 
+    max-width:100%;
+     border-radius:1rem; 
+     margin:1rem 0; 
+     }
+     
+</style>
+</head>
+<body>
+<div class="top-bar"><div><h1>🌟 Bright Future School</h1><p>Greenfield Branch</p></div>
+<div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="branch.html">Our Branch</a>
+      <a href="credentials.html">Credentials</a>
+      <a href ="rules.html"> rules and regulation </a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+
+<main class="container">
+  <h1 style="color:#0b2b40;">🏫 Greenfield Branch – Our Home</h1>
+  <img src="https://picsum.photos/id/96/800/350" alt="Campus view">
+  <div class="branch-grid">
+    <div class="feature"><h3>🌿 Eco-friendly Campus</h3><p>Solar panels, rainwater harvesting, organic garden</p></div>
+    <div class="feature"><h3>⚽ Sports Complex</h3><p>Football field, basketball court, indoor swimming pool</p></div>
+    <div class="feature"><h3>📚 Smart Library</h3><p>10,000+ books, e-resources, reading zones</p></div>
+    <div class="feature"><h3>🔬 Innovation Labs</h3><p>Robotics, 3D printing, AI lab</p></div>
+  </div>
+  <div class="feature"><h3>📍 Address</h3><p>Sector 12, Greenfield Avenue, Cityville – 110089<br>Nearest metro: Greenfield Station (5 min walk)</p></div>
+</main>
+<footer><p>Visit our open day every Saturday | Contact for campus tour</p></footer>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Future School | Academics</title>
+  <style>
+    /* same base styles as index.html – copy exactly */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: system-ui, 'Segoe UI', sans-serif; }
+    body { background:#fefefe; animation: pageFade 0.5s ease-out; }
+    @keyframes pageFade { 0%{opacity:0; transform:translateY(12px);} 100%{opacity:1;} }
+    .top-bar { background:#0b2b40; color:white; padding:0.8rem 2rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+    .logo h1 { font-size:1.6rem; } .logo p { font-size:0.75rem; opacity:0.85; }
+    .nav-links { display:flex; gap:1.8rem; flex-wrap:wrap; }
+    .nav-links a { color:white; text-decoration:none; font-weight:500; border-bottom:2px solid transparent; }
+    .nav-links a:hover, .nav-links a.active { border-bottom-color:#ffb347; }
+    .container { max-width:1280px; margin:0 auto; padding:2rem; }
+    .section-title { font-size:2rem; margin:2rem 0 1rem; border-left:6px solid #ff8c42; padding-left:1rem; }
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:2rem; margin:1.5rem 0; }
+    .card { background:white; border-radius:1.5rem; box-shadow:0 10px 20px rgba(0,0,0,0.05); overflow:hidden; padding:1.5rem; transition:0.3s; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.1); }
+    footer { background:#0b2b40; color:#ccc; text-align:center; padding:2rem; margin-top:3rem; }
+    footer a { color:#ffb347; }
+    .btn { background:#ff8c42; color:white; padding:0.5rem 1.2rem; border-radius:40px; text-decoration:none; display:inline-block; margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo"><h1>🌟 Bright Future School</h1><p>Greenfield Branch</p></div>
+   <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="branch.html">Our Branch</a>
+      <a href="credentials.html">Credentials</a>
+      <a href ="rules.html"> rules and regulation </a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+
+  <main class="container">
+    <h2 class="section-title">📖 Academic Programs</h2>
+    <div class="card-grid">
+      <div class="card"><h3>🔬 Science (PCM/PCB)</h3><p>Advanced labs, research projects, STEM club</p><a href="admissions.html" class="btn">Apply</a></div>
+      <div class="card"><h3>📊 Commerce & Economics</h3><p>Business studies, entrepreneurship, financial literacy</p><a href="admissions.html" class="btn">Apply</a></div>
+      <div class="card"><h3>🎨 Humanities & Liberal Arts</h3><p>Psychology, history, political science, creative writing</p><a href="admissions.html" class="btn">Apply</a></div>
+      <div class="card"><h3>💻 Computer Science & AI</h3><p>Python, AI fundamentals, coding competitions</p><a href="admissions.html" class="btn">Apply</a></div>
+    </div>
+    <h2 class="section-title">📅 Academic Calendar 2025-26</h2>
+    <div class="card-grid">
+      <div class="card"><h3>🗓️ Term I</h3><p>April – August | Assessments: June, August</p></div>
+      <div class="card"><h3>🏆 Term II</h3><p>September – December | Annual exams: November</p></div>
+      <div class="card"><h3>🌱 Summer Break</h3><p>May 20 – June 12 | Remedial & hobby camps</p></div>
+    </div>
+    <p style="margin-top:1rem;">📌 Curriculum follows Competence based  + Cambridge assessment pattern. Electives available from grade 9.</p>
+  </main>
+  <footer><p>© 2025 Bright Future School – Academics | Excellence in learning</p></footer>
+</body>
+</html>
+
+
+
+
+
